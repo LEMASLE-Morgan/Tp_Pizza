@@ -18,12 +18,7 @@ namespace BO
             
         };
 
-        public static List<Pate> PatesDisponibles => new List<Pate>
-        {
-            new Pate{ Id=1,Nom="Pate fine, base crême"},
-            new Pate{ Id=2,Nom="Pate fine, base tomate"},
-            new Pate{ Id=3,Nom="Pate épaisse, base crême"},
-            new Pate{ Id=4,Nom="Pate épaisse, base tomate"}
-        };
+   
+
     }
 }

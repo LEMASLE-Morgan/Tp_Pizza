@@ -40,7 +40,7 @@ namespace TP_Pizza.Utils
             get { return pizza; }
         }
 
-        public List<Ingredient> Ingredients { get; } = new List<Ingredient>
+        public List<Ingredient> Ingredients { get;  } = new List<Ingredient>
         {
 
                 new Ingredient{Id=1,Nom="Mozzarella"},
@@ -54,7 +54,7 @@ namespace TP_Pizza.Utils
 
         };
 
-        public List<Pate> Pates { get; } = new List<Pate>()
+        public List<Pate> Pates { get;  } = new List<Pate>()
         {
 
             new Pate{ Id=1,Nom="Pate fine, base crême"},

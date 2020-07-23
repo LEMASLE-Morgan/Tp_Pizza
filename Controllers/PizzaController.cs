@@ -28,16 +28,32 @@ namespace TP_Pizza.Controllers
         public ActionResult Create()
         {
             
-            return View();
+            PizzaViewModel pizzaViewModel = new PizzaViewModel();
+
+            if (pizzaViewModel != null)
+            {
+
+                pizzaViewModel.Pates = FakeDbPizza.Instance.Pates;
+            }
+            return View(pizzaViewModel);
         }
 
         // POST: Pizza/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(PizzaViewModel vm)
         {
             try
             {
-                // TODO: Add insert logic here
+
+                Pizza pizza = vm.pizza;
+
+                pizza.Pate = FakeDbPizza.Instance.Pates.FirstOrDefault(p => p.Id == vm.IdPate);
+
+                pizza.Ingredients = FakeDbPizza.Instance.Ingredients.Where(i => vm.IdsIngredients.Contains(i.Id)).ToList();
+
+                FakeDbPizza.Instance.Pizzas.Add(pizza);
+
+
 
                 return RedirectToAction("Index");
             }

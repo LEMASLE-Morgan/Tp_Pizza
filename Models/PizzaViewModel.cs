@@ -11,11 +11,11 @@ namespace TP_Pizza.Models
 
         public Pizza pizza { get; set; }
 
-        public List<Pate> Pates { get; } = new List<Pate>();
+        public List<Pate> Pates { get; set; } = new List<Pate>();
         
         public List<Ingredient> Ingredient {get;} = new List<Ingredient>();
-        public int IdPates { get; }
-        public int IdIngredient { get; }
+        public int? IdPate { get; set; }
+        public List<int> IdsIngredients { get; set; } = new List<int>();
 
     }
 }
