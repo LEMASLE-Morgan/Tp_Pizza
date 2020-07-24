@@ -1,0 +1,10 @@
+﻿@model TP_Pizza.Models.PizzaViewModel
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.HiddenFor(model => model.Pizza.Id)
+
+@Html.Partial("_PizzaDisplay")
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

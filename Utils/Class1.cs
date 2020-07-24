@@ -68,8 +68,8 @@ namespace TP_Pizza.Utils
         {
             return new List<Pizza>() {
                 new Pizza{ Id = 1, Nom = "Margherita", Pate = this.Pates.FirstOrDefault(p => p.Id == 1), Ingredients = this.Ingredients.Where(i => i.Id < 3).ToList() },
-                new Pizza{ Id = 1, Nom = "Calzone", Pate = this.Pates.FirstOrDefault(p => p.Id == 2), Ingredients = this.Ingredients.Where(i => i.Id == 2).ToList() },
-                new Pizza{ Id = 1, Nom = "Salmone", Pate = this.Pates.FirstOrDefault(p => p.Id == 1), Ingredients = this.Ingredients.Where(i => i.Id < 5).ToList() }
+                new Pizza{ Id = 2, Nom = "Calzone", Pate = this.Pates.FirstOrDefault(p => p.Id == 2), Ingredients = this.Ingredients.Where(i => i.Id == 2).ToList() },
+                new Pizza{ Id = 3, Nom = "Salmone", Pate = this.Pates.FirstOrDefault(p => p.Id == 1), Ingredients = this.Ingredients.Where(i => i.Id < 5).ToList() }
             }; }
 
       

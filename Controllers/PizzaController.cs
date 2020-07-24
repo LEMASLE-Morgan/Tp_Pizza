@@ -14,13 +14,15 @@ namespace TP_Pizza.Controllers
         // GET: Pizza
         public ActionResult Index()
         {
+
+                       
             return View(FakeDbPizza.Instance.Pizzas);
         }
 
         // GET: Pizza/Details/5
         public ActionResult Details(int id)
         {
-            var pizza = new PizzaViewModel() ;
+            PizzaViewModel pizza= new PizzaViewModel() ;
 
             pizza.Pizza = FakeDbPizza.Instance.Pizzas.FirstOrDefault(p => p.Id == id);
 
